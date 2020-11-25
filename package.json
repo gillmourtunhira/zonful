@@ -1,0 +1,39 @@
+{
+  "name": "zonful",
+  "version": "1.0.0",
+  "description": "Zonful UI",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gillmourtunhira/zonful.git"
+  },
+  "author": "Gillmour",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gillmourtunhira/zonful/issues"
+  },
+  "homepage": "https://github.com/gillmourtunhira/zonful#readme",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack-cli": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "babel-loader": "^8.2.1",
+    "css-loader": "^5.0.1",
+    "mini-css-extract-plugin": "^1.3.1",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.6.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
