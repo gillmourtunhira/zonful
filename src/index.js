@@ -5,13 +5,8 @@ import _ from 'lodash'
 import './styles.scss'
 import TopNav from './components/TopNav'
 import TopContent from './components/TopContent'
+import MiddleContent from './components/MiddleContent';
 
-
-function App(){
-    return <h1>Hello from Zonful Energy!</h1>
-}
-
-
-ReactDOM.render(<App />, document.getElementById("app"));
 ReactDOM.render(<TopNav/>, document.querySelector('header'));
 ReactDOM.render(<TopContent/>, document.getElementById("topmain"));
+ReactDOM.render(<MiddleContent />, document.getElementById("middletier"));

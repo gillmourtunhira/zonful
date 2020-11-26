@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
 :root{
     --orangeColor: #FF8101;
     --greenColor: #82FD0B;
+    --mainFont: 'Noto Sans JP', sans-serif;
 }
 
 $body-color: floralwhite;
@@ -14,17 +17,28 @@ $heading-color: #000;
 
 body {
     background-color: $body-color;
-}
-
-div {
-    color: $heading-color;
-    font-size: 2em;
+    font-family: var(--mainFont);
 }
 
 header{
     width: 100%;
-    height: 50px;
+    height: auto;
     background-color: var(--orangeColor);
+}
+.top__nav{
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    div{
+        ul{
+            li{
+                list-style: none;
+                font-weight: 300;
+                font-size: .8em;
+                color: #fff;
+            }
+        }
+    }
 }
 
 // Slider Section
@@ -41,5 +55,12 @@ header{
     }
     &--featured{
 
+    }
+}
+
+#middletier{
+    h1{
+        color: $heading-color;
+        font-size: 3em;
     }
 }
