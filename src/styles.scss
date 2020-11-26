@@ -1,6 +1,12 @@
 $body-color: floralwhite;
 $heading-color: #000;
 
+*,html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: $body-color;
 }
@@ -8,4 +14,10 @@ body {
 div {
     color: $heading-color;
     font-size: 2em;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: cadetblue;
 }
