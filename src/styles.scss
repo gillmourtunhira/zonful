@@ -26,3 +26,20 @@ header{
     height: 50px;
     background-color: var(--orangeColor);
 }
+
+// Slider Section
+#topmain{
+    width: 100%;
+}
+.main__top{
+    max-width: 100%;
+    padding: 1em;
+    height: 300px;
+    background-color: var(--greenColor);
+    &--slider{
+
+    }
+    &--featured{
+
+    }
+}
