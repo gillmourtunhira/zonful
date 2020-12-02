@@ -1,4 +1,6 @@
 import React from 'react'
+import FacebookLogo from './fblogo'
+import WhatsappLogo from './whatsapplogo'
 
 function TopNav(){
     return(
@@ -12,13 +14,16 @@ function TopNav(){
                 </div>
                 <div>
                     <ul>
-                        <li>Facebook</li>
-                        <li>Whatsapp</li>
+                        <li><FacebookLogo/></li>
+                        <li><WhatsappLogo/></li>
                         <li>Our Products</li>
                     </ul>
                 </div>
             </div>
-            <div className="main__menu"></div>
+            <div className="main__menu">
+                <div className="logo"></div>
+                <div className="right__menu"></div>
+            </div>
         </React.Fragment>
     );
 }

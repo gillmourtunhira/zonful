@@ -29,13 +29,30 @@ header{
     display: flex;
     padding: 1em;
     justify-content: space-between;
+    height: 50px;
+    max-height: 50px;
+    align-items: center;
     div{
         ul{
+            display: flex;
+            gap: 5px;
+            justify-content: space-between;
             li{
                 list-style: none;
                 font-weight: 300;
                 font-size: .8em;
                 color: #fff;
+                position: relative;
+                i{
+                    font-size: 2em;
+                }
+                &:after{
+                    content: "";
+                    border-right: 1px solid #fff;
+                    position: absolute;
+                    height: 3em;
+                    top: -7px;
+                }
             }
         }
     }
@@ -63,4 +80,10 @@ header{
         color: $heading-color;
         font-size: 3em;
     }
+}
+
+// Media Queries for Screens
+
+@media only screen and (min-device-width: 768px) {
+
 }

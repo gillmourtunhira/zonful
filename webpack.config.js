@@ -32,7 +32,26 @@ module.exports = {
                         presets: ['@babel/preset-env', '@babel/preset-react']
                     }
                     }
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'images/[hash]-[name].ext',
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+                use: [
+                    {
+                        loader: 'url-loader'
+                    }
+                ]
+            },
     ],
     },
 };
