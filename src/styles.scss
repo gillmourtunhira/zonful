@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
-:root{
+:root {
     --orangeColor: #FF8101;
     --greenColor: #82FD0B;
     --mainFont: 'Noto Sans JP', sans-serif;
@@ -9,7 +9,8 @@
 $body-color: floralwhite;
 $heading-color: #000;
 
-*,html{
+*,
+html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -20,33 +21,38 @@ body {
     font-family: var(--mainFont);
 }
 
-header{
+header {
     width: 100%;
     height: auto;
     background-color: var(--orangeColor);
 }
-.top__nav{
+
+.top__nav {
     display: flex;
     padding: 1em;
     justify-content: space-between;
     height: 50px;
     max-height: 50px;
     align-items: center;
-    div{
-        ul{
+
+    div {
+        ul {
             display: flex;
             gap: 5px;
             justify-content: space-between;
-            li{
+
+            li {
                 list-style: none;
                 font-weight: 300;
                 font-size: .8em;
                 color: #fff;
                 position: relative;
-                i{
+
+                i {
                     font-size: 2em;
                 }
-                &:after{
+
+                &:after {
                     content: "";
                     border-right: 1px solid #fff;
                     position: absolute;
@@ -59,24 +65,23 @@ header{
 }
 
 // Slider Section
-#topmain{
+#topmain {
     width: 100%;
 }
-.main__top{
+
+.main__top {
     max-width: 100%;
     padding: 1em;
     height: 300px;
-    background-color: var(--greenColor);
-    &--slider{
 
-    }
-    &--featured{
+    //background-color: var(--greenColor);
+    &--slider {}
 
-    }
+    &--featured {}
 }
 
-#middletier{
-    h1{
+#middletier {
+    h1 {
         color: $heading-color;
         font-size: 3em;
     }
@@ -84,6 +89,4 @@ header{
 
 // Media Queries for Screens
 
-@media only screen and (min-device-width: 768px) {
-
-}
+@media only screen and (min-device-width: 768px) {}

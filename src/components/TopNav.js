@@ -1,11 +1,17 @@
 import React from 'react'
 import FacebookLogo from './fblogo'
 import WhatsappLogo from './whatsapplogo'
+import logo from '../img/logo.png'
 
-function TopNav(){
-    return(
+function TopNav() {
+    return (
         <React.Fragment>
             <div className="top__nav">
+                <div>
+                    <div className="logo">
+                        <img src={logo} alt="" />
+                    </div>
+                </div>
                 <div>
                     <ul>
                         <li>info@zonfulenergy.co.zw</li>
@@ -14,8 +20,8 @@ function TopNav(){
                 </div>
                 <div>
                     <ul>
-                        <li><FacebookLogo/></li>
-                        <li><WhatsappLogo/></li>
+                        <li><FacebookLogo /></li>
+                        <li><WhatsappLogo /></li>
                         <li>Our Products</li>
                     </ul>
                 </div>

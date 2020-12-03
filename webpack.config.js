@@ -14,8 +14,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.s[ac]ss/i,
                 use: [
                     "style-loader",
@@ -25,33 +24,24 @@ module.exports = {
             },
             {
                 test: /\.m?js$/,
-                    exclude: /(node_modules|bower_components)/,
-                    use: {
+                exclude: /(node_modules|bower_components)/,
+                use: {
                     loader: 'babel-loader',
                     options: {
                         presets: ['@babel/preset-env', '@babel/preset-react']
                     }
-                    }
+                }
             },
             {
-                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: 'images/[hash]-[name].ext',
-                        }
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[contenthash].[ext]',
+                        esModule: false,
                     }
-                ]
+                }]
             },
-            {
-                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-                use: [
-                    {
-                        loader: 'url-loader'
-                    }
-                ]
-            },
-    ],
+        ],
     },
 };
