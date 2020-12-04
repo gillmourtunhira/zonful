@@ -22,7 +22,7 @@ body {
     font-family: var(--mainFont);
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
 }
@@ -40,7 +40,8 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    &--strip{
+
+    &--strip {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -56,36 +57,47 @@ header {
 
             li {
                 list-style: none;
-                a{
+
+                a {
                     text-decoration: none;
-                    font-weight: 400;
-                    font-size: 1em;
-                    color: var(--menuColor);
+                    font-size: 1.1em;
+                    color: #000;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.3;
                 }
             }
         }
     }
 }
-.logo{
+
+.logo {
     height: auto;
     width: 50%;
-    img{
+
+    img {
         width: 100%;
     }
 }
-.menu__icon{
-    i{
+
+.menu__icon {
+    display: block;
+
+    i {
         font-size: 2em;
-        color:  #fff;
+        color: #fff;
         background-color: var(--orangeColor);
     }
 }
-.menu{
+
+.menu {
     display: none;
 }
-.request__quote{
+
+.request__quote {
     margin: 2em;
-    button{
+
+    button {
         padding: 1em;
         text-transform: uppercase;
         font-weight: 500;
@@ -96,8 +108,9 @@ header {
         box-shadow: 2px 2px 2px #ff8101;
     }
 }
-.tollfree{
-    h4{ 
+
+.tollfree {
+    h4 {
         display: flex;
         justify-items: center;
         gap: 5px;
@@ -118,24 +131,29 @@ header {
     //background-color: var(--greenColor);
     &--slider {
         position: relative;
-        img{
+
+        img {
             width: 100%;
-            filter: grayscale(100%);
+            // filter: grayscale(100%);
         }
     }
-    &--byline{
+
+    &--byline {
         position: absolute;
         background-color: #FF8101A6;
         top: 40%;
         color: #fff;
         width: 90%;
         padding: 1em;
-        span{
+
+        span {
             font-size: 1em;
             font-weight: 200;
             display: flex;
             align-items: center;
-            i{
+            justify-content: space-between;
+
+            i {
                 background: #000;
                 padding: 5px;
                 border-radius: 50%;
@@ -155,4 +173,92 @@ header {
 
 // Media Queries for Screens
 
-@media only screen and (min-device-width: 768px) {}
+@media(orientation: landscape) and (min-width: 768px) {
+    header {
+        box-shadow: 0px 0px 4px #000;
+        z-index: 9;
+    }
+
+    .top__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        &--strip {
+            display: flex;
+            width: 15%;
+
+            .logo {
+                width: 100%;
+            }
+
+            .menu__icon {
+                display: none;
+            }
+        }
+
+        .menu {
+            display: block;
+            width: 35%;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        div {
+            ul {
+                li {
+                    position: relative;
+
+                    a {
+                        &::after {
+                            content: "|";
+                            padding-right: 10px;
+                            position: absolute;
+                            top: -1px;
+                            color: var(--orangeColor);
+                            right: -25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tollfree {
+        h4 {
+            font-size: 1.5em;
+            font-weight: 900;
+            align-items: center;
+
+            i {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    .main__top {
+        &--byline {
+            background-color: #82fd0b7a;
+            top: 30%;
+            color: #fff;
+            width: 60%;
+            padding: 3em;
+            border-radius: 0px 90px 90px 0;
+
+            h3 {
+                font-size: 3em;
+            }
+
+            span {
+                font-size: 1.5em;
+
+                i {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
