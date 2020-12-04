@@ -154,7 +154,7 @@ header {
             justify-content: space-between;
 
             i {
-                background: #000;
+                background: var(--orangeColor);
                 padding: 5px;
                 border-radius: 50%;
             }
@@ -165,6 +165,8 @@ header {
 }
 
 #middletier {
+    width: 100%;
+
     h1 {
         color: $heading-color;
         font-size: 3em;
@@ -173,7 +175,12 @@ header {
 
 // Media Queries for Screens
 
-@media(orientation: landscape) and (min-width: 768px) {
+@media(orientation: landscape) and (min-width: 1200px) {
+    .grid {
+        margin: 0 auto;
+        width: 960px;
+    }
+
     header {
         box-shadow: 0px 0px 4px #000;
         z-index: 9;
@@ -260,5 +267,65 @@ header {
                 }
             }
         }
+    }
+
+    #featured {
+        background-color: #e6dcdb;
+        padding: 2em;
+    }
+
+    .featured {
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid #000;
+        // padding: 1em;
+
+        &--desc {
+            width: 60%;
+            padding: 5em 0 0 5em;
+
+            div {
+                h3 {
+                    font-weight: 600;
+                    font-size: 2em;
+                    margin-bottom: 1em;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        width: 80px;
+                        height: 1px;
+                        bottom: -40%;
+                        position: absolute;
+                        left: 0;
+                        border-bottom: 3px solid var(--orangeColor);
+                    }
+                }
+
+                button {
+                    padding: .5em 3em;
+                    font-size: 1em;
+                    font-weight: 600;
+                    background-color: var(--orangeColor);
+                    outline: none;
+                    border: none;
+                    box-shadow: 5px 3px 0px #000;
+                }
+            }
+
+            .pricetag {
+                padding: 3em 0;
+
+                span {
+                    font-size: 1.5em;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    // Middle Section Content
+    #middletier {
+        width: 960px;
     }
 }
