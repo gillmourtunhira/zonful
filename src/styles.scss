@@ -24,6 +24,7 @@ body {
 h2{
     color: $heading-color;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -337,6 +338,157 @@ header {
     }
 }
 
+// Testimonies Section
+#testimonies{
+    position: relative;
+}
+.testimony{
+    width: 100%;
+    &__block{
+        &--item{
+            p{
+                // height: 150px;
+                background-color: #82FD0B0D;
+                border-radius: 5px;
+                border: 1px solid #d7dbe0;
+                box-shadow: 0 0 20px #d5dde1;
+                text-align: left;
+                padding: 25px;
+                margin-bottom: 15px;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    bottom: -20px;
+                    left: 26px;
+                    content: '';
+                    display: block;
+                    border-width: 20px;
+                    border-top-width: 20px;
+                    border-style: solid;
+                    border-top-width: 2px;
+                    border-top-color: rgba(0, 0, 0, 0);
+                    border-bottom-color: rgba(0, 0, 0, 0);
+                    border-left-color: rgba(0, 0, 0, 0);
+                    border-right-color: #FFF;
+                }
+            }
+        }
+    }
+    &--heading{
+        h3{
+            text-align: center;
+            font-size: 2em;
+            line-height: 40px;
+            font-weight: 600;
+            margin: -0.55em 0 18px;
+            color: $heading-color;
+        }
+    }
+    &__person{
+        display: flex;
+        align-items: center;
+        gap: .8em;
+        i{
+            font-size: 2em;
+            border: 1px solid var(--orangeColor);
+            border-radius: 50%;
+            padding: 5px;
+        }
+        h4{
+            font-weight: 400;
+            font-size: .9em;
+            color: var(--menuColor);
+        }
+    }
+    &--navigation{
+        position: absolute;
+        bottom: 100;
+        margin: 0 auto;
+        display: flex;
+        width: 1250px;
+        justify-content: space-between;
+        left: 0;
+        right: 0;
+        i{
+            font-size: 2.5em;
+            font-weight: 100;
+            width: 30px;
+            height: 30px;
+            color: var(--orangeColor);
+            cursor: pointer;
+        }
+    }
+}
+
+// Call to Action Section
+#call{
+    margin: 2em 0;
+}
+.call{
+    background-color: #fff;
+    border: 1px solid var(--menuColor);
+    padding: 1em;
+    &--details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        h3{
+            margin: 1em 0;
+            font-size: 1.5em;
+            font-weight: 900;
+            color: var(--menuColor);
+            span{
+                color: var(--orangeColor);
+            }
+        }
+        p{
+            font-weight: 300;
+            color: var(--menuColor);
+        }
+    }
+    &--buttons{
+        display: flex;
+        gap: 1em;
+        button{
+            outline: none;
+            padding: 1em;
+            font-size: 1em;
+            font-weight: 600;
+            border: none;
+            text-transform: uppercase;
+            &:nth-child(1){
+                background-color: var(--orangeColor);
+                color: #fff;
+            }
+            &:nth-child(2){
+                background-color: var(--greenColor);
+            }
+        }
+    }
+}
+
+// Partners Section
+#partners{
+    margin: 2em 0;
+}
+.partners{
+    &--heading{
+        text-align: center;
+        h3{
+            font-size: 2em;
+            line-height: 40px;
+            font-weight: 600;
+            margin: -0.55em 0 18px;
+            color: #3d4c58;
+        }
+    }
+    &--wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
 // Media Queries for Screens
 
 @media(orientation: landscape) and (min-width: 1200px) {
@@ -575,4 +727,38 @@ header {
             }
         }
 }
+// Testimonies Section
+    #testimonies{
+
+    }
+    .testimony{
+        width: 1173px;
+        max-width: 100%;
+        margin: 0 auto;
+        &__block{
+            display: flex;
+            gap:5px
+        }
+    }
+
+    // Call to Action Section
+        #call{}
+        .call{
+            width: 1173px;
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        // Partners Section
+        #partners{}
+        .partners{
+            width: 1173px;
+            max-width: 100%;
+            margin: 0 auto;
+            &--wrapper{
+                display: flex;
+            }
+
+        }
 }
