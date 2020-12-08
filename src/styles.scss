@@ -8,7 +8,7 @@
 }
 
 $body-color: floralwhite;
-$heading-color: #000;
+$heading-color: #3d4c58;
 
 *,
 html {
@@ -21,7 +21,9 @@ body {
     background-color: $body-color;
     font-family: var(--mainFont);
 }
-
+h2{
+    color: $heading-color;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -221,6 +223,120 @@ header {
     }
 }
 
+// Bottom Content Section
+#bottomtier{
+    margin: 1em 0;
+}
+
+.bottom__content{
+
+}
+.video__content{
+    display: flex;
+    flex-direction: column;
+    &--desc{
+
+        h3{
+            color: #fff;
+            margin-bottom: 2em;
+        }
+        p{
+            color: #fff;
+            margin: 1em 0;
+            font-weight: 300;
+            font-size: 1.2em;
+        }
+        button{
+            margin: 2em 0;
+            outline: none;
+            padding: 1em 2em;
+            border: 1px solid #fff;
+            background: none;
+            color: #fff;
+            font-size: 1em;
+            font-weight: 500;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+// News Content Section
+.news__content{
+    width: 100%;
+    h2{
+        margin-bottom: 1em;
+        font-size: 2em;
+    }
+    &--blogs{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        div{
+            article{
+                border: 1px solid $heading-color;
+                padding: 1em;
+                height: 340px;
+                max-height: 100%;
+                position: relative;
+                // border-radius: 5px;
+                div{
+                    margin-bottom: 1em;
+                    border-bottom: 1px solid $heading-color;
+                    padding-bottom: 1em;
+                    h3{
+                        color: var(--orangeColor);
+                    }
+                    span{
+                        font-style: italic;
+                    }
+                }
+                p{
+                    line-height: 1.6;
+                }
+                button{
+                    padding: 5px 10px;
+                    outline: none;
+                    background-color: var(--orangeColor);
+                    box-shadow: 5px 5px 0px #000;
+                    color: #fff;
+                    border: none;
+                    margin: 1em 0;
+                    font-size: 1em;
+                    font-weight: 500;
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+        .blogs{
+            width: 100%;
+        }
+    }
+}
+
+// Banner Strip
+.strip__wrapper{
+    display: flex;
+    position: relative;
+    &--logo{
+        img{
+            width: 100%;
+        }
+    }
+    &--item{
+        text-align: center;
+        color: #fff;
+        div{
+            span{
+                font-weight: 100;
+                font-size: .8em;
+            }
+        }
+    }
+}
+
 // Media Queries for Screens
 
 @media(orientation: landscape) and (min-width: 1200px) {
@@ -377,4 +493,86 @@ header {
         width: 1173px;
         max-width: 100%;
     }
+
+    // Bottom Section Content
+    #bottomtier{
+        background-color: var(--orangeColor);
+        padding: 2em;
+    }
+    .bottom__content{
+        width: 1173px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .video__content{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        div{
+            width: 50%;
+        }
+        &--desc{
+            padding: 2em 0 0 0;
+        }
+    }
+
+    // News Content Section
+    .news__content{
+        width: 1173px;
+        max-width: 100%;
+        margin: 0 auto;
+        h2{
+            text-align: center;
+        }
+        &--blogs{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            div{
+                article{
+                    div{
+
+                    }
+                }
+            }
+            .blog{
+                width: 33%;
+            }
+        }
+    }
+    // Banner Strip
+    #solarbanner{
+        background-image: url(./img/solarbanner.png);
+        width: 100%;
+        margin: 3em 0;
+        background-position: center;
+        position: relative;
+        padding: 20px 0;
+        background-size: cover;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: rgba(55,55,74,0.90);
+        }
+    }
+.strip__wrapper{
+        width: 1173px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--logo{
+            width: 40%;
+            img{
+                width: 60%;
+            }
+        }
+}
 }
