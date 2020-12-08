@@ -172,6 +172,54 @@ header {
         font-size: 3em;
     }
 }
+.middle__header{
+    h2{
+        text-align: center;
+        margin: 1em 0;
+    }
+}
+.blobs{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    div{
+        background: #182c3f;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        padding: 2em;
+        text-align: center;
+        width: 225px;
+        height: 225px;
+        box-shadow: -5px 5px 10px rgba(0,0,0,.034),-10px 10px 5px rgba(0,0,0,.048),-15px 15px 7px rgba(0,0,0,.06),-20px 20px 15px rgba(0,0,0,.072),-25px 25px 25px rgba(0,0,0,.086),-30px 30px 50px rgba(0,0,0,.12);
+        img{
+            width: 40%;
+        }
+        &:last-child{
+            background-color: var(--greenColor);
+            img{
+                width: 100%;
+            }
+            h4,h6{
+                color: #000;
+            }
+        }
+    }
+    &--title{
+        color: #fff;
+        h4{
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            line-height: 20px;
+            margin: 1em 0;
+        }
+        h6{
+            font-size: 1em;
+            font-weight: 300;
+        }
+    }
+}
 
 // Media Queries for Screens
 
@@ -326,6 +374,7 @@ header {
 
     // Middle Section Content
     #middletier {
-        width: 960px;
+        width: 1173px;
+        max-width: 100%;
     }
 }
