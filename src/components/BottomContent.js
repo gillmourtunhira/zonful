@@ -14,7 +14,7 @@ function BottomContent(){
                         <button>Read More</button>
                     </div>
                     <div className="video__content--vid">
-                        <iframe width="600" height="340" src="https://www.youtube.com/embed/0WhVoY3uWaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="340" src="https://www.youtube.com/embed/0WhVoY3uWaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
 
