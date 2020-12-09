@@ -1,5 +1,11 @@
 import React from 'react'
 
+import eep from '../img/partners/eep.jpg'
+import kiva from '../img/partners/kiva.png'
+import gogla from '../img/partners/gogla.png'
+import aecf from '../img/partners/aecf.png'
+import ecocash from '../img/partners/ecocash.png'
+
 function Partners(){
     return(
         <React.Fragment>
@@ -7,14 +13,26 @@ function Partners(){
                 <div className="partners--heading">
                     <h3>Our Partners</h3>
                     <div className="partners--wrapper">
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>4</div>
+                        <div>
+                            <img src={eep} alt=""/>
+                        </div>
+                        <div>
+                            <img src={kiva} alt=""/>
+                        </div>
+                        <div>
+                            <img src={gogla} alt=""/>
+                        </div>
+                        <div>
+                            <img src={aecf} alt=""/>
+                        </div>
+                        <div>
+                            <img src={ecocash} alt=""/>
+                        </div>
                     </div>
                     <div className="partners--navigation">
-                        <div className="left-arrow"><i className="material-icons">arrow_back_ios</i></div>
-                        <div className="right-arrow"><i className="material-icons">arrow_forward_ios</i></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                 </div>
             </div>
