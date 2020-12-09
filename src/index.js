@@ -15,6 +15,7 @@ import SolarStrip from './components/BannerTier'
 import Testimonies from './components/Testimonies'
 import Call from './components/CallTier'
 import Partners from './components/PartnersTier'
+import Footer from './components/Footer';
 
 ReactDOM.render( < TopNav / > , document.querySelector('header'));
 ReactDOM.render( < SlideContent / > , document.getElementById("topmain"));
@@ -26,3 +27,4 @@ ReactDOM.render(<SolarStrip/>, document.getElementById("solarbanner"));
 ReactDOM.render(<Testimonies/>, document.getElementById("testimonies"));
 ReactDOM.render(<Call/>, document.getElementById("call"));
 ReactDOM.render(<Partners/>, document.getElementById("partners"));
+ReactDOM.render(<Footer/>, document.getElementById("footer"));

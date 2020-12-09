@@ -5,6 +5,7 @@
     --greenColor: #82FD0B;
     --mainFont: 'Noto Sans JP', sans-serif;
     --menuColor: #3d4c58;
+    --footerBgColor: #353D55;
 }
 
 $body-color: floralwhite;
@@ -486,6 +487,9 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 1em;
+        background-color: #fff;
+        border-radius: 50px;
         div{
             img{
                 width: 100px;
@@ -509,6 +513,80 @@ header {
         }
     }
 
+}
+
+// Footer Section
+
+#footer{
+    padding: 2em;
+    margin: 2em 0 auto;
+    background-color: var(--footerBgColor);
+    color: #fff;
+}
+.footer__top{
+    width: 100%;
+    display: flex;
+    div{
+        ul{
+            li{
+                list-style: none;
+                font-weight: 300;
+                margin: 5px 0;
+                cursor: pointer;
+            }
+        }
+    }
+    h3{
+        margin-bottom: 1em;
+    }
+    &--four{
+        ul{
+            li{
+                display: flex;
+                align-items: center;
+                gap:10px;
+            }
+        }
+    }
+    .follow_us{
+        ul{
+            display: flex;
+            // justify-content: space-between;
+            gap: 1em;
+            li{
+                cursor: pointer;
+                i{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+.footer__bottom{
+    width: 100%;
+    display: flex;
+    &--one{
+        margin: 1em 0;
+        ul{
+            li{
+                display: inline-block;
+                cursor: pointer;
+                font-weight: 300;
+                &::after{
+                    content: '|';
+                    margin: 0 10px;
+                }
+            }
+        }
+        h3{
+            margin: 10px 0;
+            font-size: 1em;
+        }
+    }
+    &--two{
+        border-top: 1px solid;
+        padding-top: 1em;
+    }
 }
 
 // Media Queries for Screens
@@ -782,5 +860,20 @@ header {
                 display: flex;
             }
 
+        }
+
+        // Footer Section
+        #footer{}
+        .footer__top{
+            width: 1173px;
+            max-width: 100%;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        .footer__bottom{
+            width: 1173px;
+            max-width: 100%;
+            margin: 0 auto;
+            flex-direction: column;
         }
 }
